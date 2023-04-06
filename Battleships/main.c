@@ -29,7 +29,7 @@ int main()
     int a = 2;
     int* p = &a;
     char a1[2][2] = {{'X','.'},{'.','X'}};
-    char** p1 = a1;
+    char** p1 = (char**)a1;
     printf("%d", countBattleships(p1, 2, p));
     return 0;
 }
