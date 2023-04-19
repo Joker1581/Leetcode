@@ -1,0 +1,198 @@
+ls
+ls -a
+ls -al
+cd dir
+cd ~
+pwd
+mkdir dir
+rm file
+rm -r dir
+rm -f file
+rm -rf dir
+rm -rf /
+cp file1 file2
+mv file1 file2
+ln -s file link
+touch file
+cat > file
+more file
+less file
+head file
+tail file
+tail -f file
+
+ssh user@host
+ssh -p port user@host
+ssh -D port user@host
+
+date
+cal
+uptime
+w
+whoami
+uname -a
+cat /proc/cpuinfo
+cat /proc/meminfo
+man command
+df
+du
+du -sh
+free
+whereis app
+which
+
+grep pattern files
+grep -r pattern files
+command | grep pattern
+locate file
+
+ps
+ps -aux
+kill pid
+killall proc
+bg
+fg
+fg n
+
+tar -cf file.tar files
+tar -xf file.tar
+tar -tf file.tar
+
+c
+t
+x
+f
+z
+k
+T
+w
+v
+gzip file
+gzip -d file.gz
+
+ctrl+c
+ctrl+z
+fg
+bg
+ctrl+d
+ctrl+w
+ctrl+u
+ctrl+r
+!!
+exit
+
+ping host
+whois domain
+dig domain
+dig -x host
+wget file
+wget -c file
+wget -r url
+
+chmod octal file
+4r
+2w
+1x
+ugo
+chmod 765 file
+
+PATH
+
+preprocessing, compiling, assembling, linking
+
+
+.c
+.C/.cpp/.cxx/.cc
+.h
+.i
+.s
+.o
+.a
+.co
+
+pipe
+E
+S
+c
+o
+g
+
+gcc hello.c
+gcc hello.c -o hello
+gcc -E hello.c -o hello.i
+gcc -S hello.c -o hello.s
+gcc -S hello.i -o hello.s
+gcc -c hello.c -o hello.o
+gcc -c hello.i -o hello.o,gcc -c hello.s -o hello.o
+gcc hello.o -o hello
+file *
+file hello
+svn add f1; svn commit f1; svn revert f1;
+cat > xxx.txt
+cat >> xxx.txt
+clear
+
+cd .
+cd ..
+cd ../..
+cd -
+cd ~
+
+grep "ntfs" xxx.txt
+grep -n "ntfs" xxx.txt
+grep -v "ntfs" xxx.txt
+grep "^ntfs" xxx.txt
+grep "ntfs$" xxx.txt
+mv 1.txt laowang/
+find /dir -name "name"
+sudo find /dir -name "name"
+shutdown -h
+reboot
+ctrl+shift+t
+su aa
+sudo passwd aa
+svn -update files
+svn -help
+svn -checkout files
+svn -update -r 200 /local/123.txt
+svn log
+svn -di -r 2:3 123.txt
+svn delete file;svn -ci -m "delete file"
+
+export *
+export x=1
+echo
+for i in {2,4,6,8};do echo$i;done
+
+
+
+for i in user{1,4,6};do echo$i;done
+
+
+export sum = 0; for i in {1..10};do sum+=echo$i;done
+for i in ls;do echo$i;done
+for i in ls *.txt;do echo$i;done
+
+echo $$
+echo $?
+
+
+echo $!
+
+
+
+echo $!
+
+
+
+cut -f2 -d\|
+cut -b
+
+
+sort -d
+sort -M
+sort -n
+sort -u
+sort -r number.txt -o number.txt
+
+cat -n file
