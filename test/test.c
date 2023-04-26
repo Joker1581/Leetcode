@@ -24,6 +24,8 @@ int main()
 {
     /* code */
     f2();
+    char c1 = 'e';
+
     return 0;
 }
 

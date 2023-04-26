@@ -2,6 +2,10 @@
     "files.associations": {
         "stdlib.h": "c",
         "stdio.h": "c",
-        "uthash.h": "c"
+        "uthash.h": "c",
+        "iterator": "c",
+        "xmemory": "c",
+        "xtree": "c",
+        "xutility": "c"
     }
 }
