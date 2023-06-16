@@ -1,27 +1,25 @@
+"""
+# Definition for a Node.
 class Node:
-    def __init__(self, val: int = 0, left: 'Node' = None, right: 'Node' = None, next: 'Node' = None):
+    def __init__(self, val = 0, neighbors = None):
         self.val = val
-        self.left = left
-        self.right = right
-        self.next = next
+        self.neighbors = neighbors if neighbors is not None else []
+"""
+
 class Solution:
-    def connect(self, root: 'Node') -> 'Node':
-        if not root:
-            return None
-        curr = root
-        dummy = Node(-999)
-        head = root
-        while head:
-            curr=head 
-            prev=dummy 
-            while curr:  
-                if curr.left:
-                    prev.next=curr.left
-                    prev=prev.next
-                if curr.right:
-                    prev.next=curr.right
-                    prev=prev.next                                                
-                curr=curr.next
-            head=dummy.next 
-            dummy.next=None
-        return root
+    def cloneGraph(self, node: 'Node') -> 'Node':
+        if not node: return node
+        
+        q, clones = deque([node]), {node.val: Node(node.val, [])}
+        while q:
+            cur = q.popleft() 
+            cur_clone = clones[cur.val]            
+
+            for ngbr in cur.neighbors:
+                if ngbr.val not in clones:
+                    clones[ngbr.val] = Node(ngbr.val, [])
+                    q.append(ngbr)
+                    
+                cur_clone.neighbors.append(clones[ngbr.val])
+                
+        return clones[node.val]
