@@ -1,0 +1,25 @@
+from typing import List
+from collections import deque
+class Solution:
+    def minMutation(self, startGene: str, endGene: str, bank: List[str]) -> int:
+        bset = set(bank)
+        options = ['A','C','G','T']
+        queue = deque()
+        queue.append(startGene)
+        visited = set()
+        visited.add(startGene)
+        count = 0
+        while queue:
+            size = len(queue)
+            for i in range(size):
+                gene = queue.popleft()
+                if gene == endGene:
+                    return count
+                for j in range(8):
+                    for option in options:
+                        newGene = gene[:j] + option + gene[j+1:]
+                        if newGene in bset and newGene not in visited:
+                            visited.add(newGene)
+                            queue.append(newGene)
+            count += 1
+        return -1
